@@ -127,6 +127,20 @@ function sumEvenNumbers(n: number): number {
   }
   return sum;
 }
-console.log(sumEvenNumbers(6));
-console.log(sumEvenNumbers(10));
-console.log(sumEvenNumbers(5));
+// console.log(sumEvenNumbers(6));
+// console.log(sumEvenNumbers(10));
+// console.log(sumEvenNumbers(5));
+
+// challenge 12: Multiply by itself
+function powerUp(num: number, times: number=0): number {
+  let result = 1;
+  for (let i = 0; i < times; i++) {
+    result = result * num;
+  }
+  return result;
+}
+console.log(powerUp(2, 3));
+console.log(powerUp(5, 0));
+console.log(powerUp(3, 4));
+console.log(powerUp(0));
+

@@ -125,6 +125,19 @@ function sumEvenNumbers(n) {
     }
     return sum;
 }
-console.log(sumEvenNumbers(6));
-console.log(sumEvenNumbers(10));
-console.log(sumEvenNumbers(5));
+// console.log(sumEvenNumbers(6));
+// console.log(sumEvenNumbers(10));
+// console.log(sumEvenNumbers(5));
+// challenge 12: Multiply by itself
+function powerUp(num, times) {
+    if (times === void 0) { times = 0; }
+    var result = 1;
+    for (var i = 0; i < times; i++) {
+        result = result * num;
+    }
+    return result;
+}
+console.log(powerUp(2, 3));
+console.log(powerUp(5, 0));
+console.log(powerUp(3, 4));
+console.log(powerUp(0));
