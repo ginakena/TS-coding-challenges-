@@ -8,4 +8,10 @@ function addition(num1, num2) {
 function convert(int) {
     return int * 60;
 }
-console.log(convert(5));
+//console.log(convert(5));
+//perimeter of a rectangle
+function findPerimeter(length, width) {
+    return (length + width) * 2;
+}
+//console.log(findPerimeter(6, 7));
+//console.log(findPerimeter(20, 10));

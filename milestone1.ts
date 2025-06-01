@@ -9,4 +9,13 @@ function addition(num1: number, num2: number): number {
 function convert(int: number): number {
     return int * 60;
 }
-console.log(convert(5));
+//console.log(convert(5));
+
+//perimeter of a rectangle
+function findPerimeter(length: number, width: number): number {
+    return (length + width) * 2;
+}
+//console.log(findPerimeter(6, 7));
+//console.log(findPerimeter(20, 10));
+
+//
