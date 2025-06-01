@@ -37,5 +37,20 @@ function canDrive(name: string, age: number): string {
     }
 
 }
-console.log(canDrive("jane", 22));
-console.log(canDrive("june", 17));
+//console.log(canDrive("jane", 22));
+//console.log(canDrive("june", 17));
+
+//challenge 6: Finding the largest number
+function findLargest(a: number, b: number, c: number): number {
+    if (a > b && a > c) {
+        return a;
+    }
+    else if (b > a && b > c) {
+        return b;
+    }
+    else {
+        return c;
+    }
+}
+console.log(findLargest(5, 9, 3));
+console.log(findLargest(-1, -5, -3)); 
