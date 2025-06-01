@@ -114,6 +114,19 @@ function perimeter(shape: string, num: number): number {
   }
   return perimeter;
 }
-console.log(perimeter("s", 7));
-console.log(perimeter("c", 4));
+// console.log(perimeter("s", 7));
+// console.log(perimeter("c", 4));
 
+//challenge 11: Write a function called sumEvenNumbers(n)
+function sumEvenNumbers(n: number): number {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+console.log(sumEvenNumbers(6));
+console.log(sumEvenNumbers(10));
+console.log(sumEvenNumbers(5));
