@@ -67,5 +67,21 @@ function calculateBMI(weight, height) {
     }
     return category;
 }
-console.log(calculateBMI(68, 1.75));
-console.log(calculateBMI(85, 1.8));
+//console.log(calculateBMI(68, 1.75));
+//console.log(calculateBMI(85, 1.8));
+//challenge 8: Greeting based on time
+function greetUser(name, hour) {
+    if (hour >= 5 && hour <= 12) {
+        return "Good morning, ".concat(name, "!");
+    }
+    else if (hour >= 12 && hour <= 17) {
+        return "Good afternoon, ".concat(name, "!");
+    }
+    else if (hour >= 18 && hour <= 21) {
+        return "Good evening, ".concat(name, "!");
+    }
+    else {
+        return "Good night, ".concat(name, "!");
+    }
+}
+console.log(greetUser("Regina", 9));
