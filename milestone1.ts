@@ -18,4 +18,12 @@ function findPerimeter(length: number, width: number): number {
 //console.log(findPerimeter(6, 7));
 //console.log(findPerimeter(20, 10));
 
-//
+//challenge 4: Checking negative
+function isNegative(int: number): boolean {
+    if (int < 0) {
+        return true;
+    }
+    return false;
+}
+console.log(isNegative(-23));
+console.log(isNegative(55));
