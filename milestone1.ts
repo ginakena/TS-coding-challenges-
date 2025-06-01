@@ -99,7 +99,21 @@ function fizzBuzzCheck(num: number): string {
     return num.toString();
 }
 
-console.log(fizzBuzzCheck(15));  
-console.log(fizzBuzzCheck(9));   
-console.log(fizzBuzzCheck(10));  
-console.log(fizzBuzzCheck(7));   
+//console.log(fizzBuzzCheck(15));  
+// console.log(fizzBuzzCheck(9));   
+// console.log(fizzBuzzCheck(10));  
+// console.log(fizzBuzzCheck(7));
+
+//challenge 10: finding perimeter of shapes
+function perimeter(shape: string, num: number): number {
+  let perimeter: number;
+  if (shape === "s") {
+    perimeter = 4 * num;
+  } else if (shape === "c") {
+    perimeter = 6.28 * num;
+  }
+  return perimeter;
+}
+console.log(perimeter("s", 7));
+console.log(perimeter("c", 4));
+
