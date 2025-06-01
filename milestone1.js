@@ -162,6 +162,22 @@ function sumMultiples(n, divisor) {
     }
     return sum;
 }
-console.log(sumMultiples(10, 2));
-console.log(sumMultiples(15, 3));
-console.log(sumMultiples(7, 5));
+// console.log(sumMultiples(10, 2));
+// console.log(sumMultiples(15, 3));
+// console.log(sumMultiples(7, 5));
+//challenge 15: Sum of Digits
+function sumDigits(num) {
+    var sum = 0;
+    if (num == 0) {
+        return 0;
+    }
+    while (num != 0) {
+        var last = num % 10;
+        sum = sum + last;
+        num = Math.floor(num / 10);
+    }
+    return sum;
+}
+console.log(sumDigits(123));
+console.log(sumDigits(4567));
+console.log(sumDigits(0));
