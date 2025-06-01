@@ -77,12 +77,29 @@ function calculateBMI(weight: number, height: number): string {
 function greetUser(name: string, hour: number): string {
     if (hour >= 5 && hour <= 12) {
     return `Good morning, ${name}!`;
-  } else if (hour >= 12 && hour <= 17) {
+    } else if (hour >= 12 && hour <= 17) {
     return `Good afternoon, ${name}!`;
-  } else if (hour >= 18 && hour <= 21) {
+    } else if (hour >= 18 && hour <= 21) {
     return `Good evening, ${name}!`;
-  } else {
+    } else {
     return `Good night, ${name}!`;
   }
 }
-console.log(greetUser("Regina",9)); 
+//console.log(greetUser("Regina",9)); 
+
+//challenge 9: Write a function called fizzBuzzCheck
+function fizzBuzzCheck(num: number): string {
+    if (num % 3 === 0 && num % 5 === 0) {
+        return "FizzBuzz";
+    } else if (num % 3 === 0) {
+        return "Fizz";
+    } else if (num % 5 === 0) {
+        return "Buzz";
+    }
+    return num.toString();
+}
+
+console.log(fizzBuzzCheck(15));  
+console.log(fizzBuzzCheck(9));   
+console.log(fizzBuzzCheck(10));  
+console.log(fizzBuzzCheck(7));   

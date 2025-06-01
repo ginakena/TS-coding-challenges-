@@ -84,4 +84,21 @@ function greetUser(name, hour) {
         return "Good night, ".concat(name, "!");
     }
 }
-console.log(greetUser("Regina", 9));
+//console.log(greetUser("Regina",9)); 
+//challenge 9: Write a function called fizzBuzzCheck
+function fizzBuzzCheck(num) {
+    if (num % 3 === 0 && num % 5 === 0) {
+        return "FizzBuzz";
+    }
+    else if (num % 3 === 0) {
+        return "Fizz";
+    }
+    else if (num % 5 === 0) {
+        return "Buzz";
+    }
+    return num.toString();
+}
+console.log(fizzBuzzCheck(15));
+console.log(fizzBuzzCheck(9));
+console.log(fizzBuzzCheck(10));
+console.log(fizzBuzzCheck(7));
