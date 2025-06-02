@@ -44,4 +44,16 @@ const candidates: Candidate[] = [
   { name: "Charlie", votes: 65 }
 ];
 
-console.log(findWinner(candidates)); 
+//console.log(findWinner(candidates)); 
+
+//challenge 4: Find the longest word
+function findLongestWord(words: string[]): string {
+    let longestword = words[0]
+    for (let i=0; i < words.length; i++) {
+        if (words[i].length > longestword.length) {
+            longestword = words[i];
+        }
+    }
+    return longestword;
+}
+console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"]));
