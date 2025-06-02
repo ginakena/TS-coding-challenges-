@@ -162,8 +162,20 @@ function linearSearchAll(array: number[], target: number): number[] {
   }
   return indices;
 }
-console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7));
-console.log(linearSearchAll([5, 3, 7, 1, 4], 10));
+// console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7));
+// console.log(linearSearchAll([5, 3, 7, 1, 4], 10));
+
+//challenge 14: Count occurences
+function countOccurrences(array: string[]): { [key: string]: number } {
+  const object: { [key: string]: number } = {};
+
+  for (const item of array) {
+    object[item] = (object[item] || 0) + 1;
+  }
+
+  return object;
+}
+console.log(countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]));
 
 
 
