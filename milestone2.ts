@@ -75,7 +75,18 @@ function filterByLength(array: string[], minlength: number): string[] {
   return filteredArray;
 }
 
-console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5));
+//console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5));
 
+//challenge 7: Sum of Even Numbers
+function sumOfEvenNumbers(numbers: number[]): number {
+  let sum: number = 0;
+  for (let i=0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      sum += numbers[i];
+    }
+  }
+  return sum;
+}
+console.log(sumOfEvenNumbers([1, 2, 3, 4, 5, 6]));
 
 
