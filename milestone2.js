@@ -151,7 +151,7 @@ function countOccurrences(array) {
     }
     return object;
 }
-console.log(countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]));
+//console.log(countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]));
 //challenge 15: Remove Duplicates
 function removeDuplicates(array) {
     var newArray = [];
@@ -169,4 +169,21 @@ function removeDuplicates(array) {
     }
     return newArray;
 }
-console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]));
+//console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]));
+//chalenge 16: Most frequent value
+function mostFrequent(array) {
+    var counts = {};
+    var maxCount = 0;
+    var mostFrequentItem = array[0];
+    for (var _i = 0, array_2 = array; _i < array_2.length; _i++) {
+        var item = array_2[_i];
+        counts[item] = (counts[item] || 0) + 1;
+        if (counts[item] > maxCount) {
+            maxCount = counts[item];
+            mostFrequentItem = item;
+        }
+    }
+    return mostFrequentItem;
+}
+console.log(mostFrequent([1, 2, 3, 2, 4, 1, 2]));
+console.log(mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]));

@@ -175,7 +175,7 @@ function countOccurrences(array: string[]): { [key: string]: number } {
 
   return object;
 }
-console.log(countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]));
+//console.log(countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]));
 
 //challenge 15: Remove Duplicates
 function removeDuplicates(array: number[]): number[] {
@@ -194,7 +194,25 @@ function removeDuplicates(array: number[]): number[] {
   }
   return newArray;
 }
-console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]));
+//console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]));
+
+//chalenge 16: Most frequent value
+function mostFrequent(array: number[] | string[]): number | string {
+  let counts: Record<number | string, number> = {};
+  let maxCount = 0;
+  let mostFrequentItem: number | string = array[0];
+
+  for (let item of array) {
+    counts[item] = (counts[item] || 0) + 1;
+    if (counts[item] > maxCount) {
+      maxCount = counts[item];
+      mostFrequentItem = item;
+    }
+  }
+  return mostFrequentItem;
+}
+console.log(mostFrequent([1, 2, 3, 2, 4, 1, 2]));  
+console.log(mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]));
 
 
 
