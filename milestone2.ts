@@ -20,4 +20,28 @@ function findMax(arr: number[]): number {
     }
     return max;
 } 
-console.log(findMax([3, 7, 2, 9, 5]));
+// console.log(findMax([3, 7, 2, 9, 5]));
+
+//challenge 3: Election winner
+interface Candidate {
+  name: string;
+  votes: number;
+};
+
+function findWinner(candidates: Candidate[]): Candidate {
+  let winner = candidates[0];
+  for (let i = 1; i < candidates.length; i++) {
+    if (candidates[i].votes > winner.votes) {
+      winner = candidates[i];
+    }
+  }
+  return winner;
+}
+
+const candidates: Candidate[] = [
+  { name: "Alice", votes: 50 },
+  { name: "Bob", votes: 75 },
+  { name: "Charlie", votes: 65 }
+];
+
+console.log(findWinner(candidates)); 
