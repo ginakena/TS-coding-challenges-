@@ -149,8 +149,22 @@ function reverseLinearSearch(array: number[], target: number): number {
   }
   return -1;
 }
-console.log(reverseLinearSearch([5, 3, 7, 1, 4, 7], 7));
-console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10));
+// console.log(reverseLinearSearch([5, 3, 7, 1, 4, 7], 7));
+// console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10));
+
+//challenge 13: Linear Search All
+function linearSearchAll(array: number[], target: number): number[] {
+  let indices: number[] = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === target) {
+      indices.push(i);
+    }
+  }
+  return indices;
+}
+console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7));
+console.log(linearSearchAll([5, 3, 7, 1, 4], 10));
+
 
 
 
