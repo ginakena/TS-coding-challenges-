@@ -72,4 +72,19 @@ function sumOfEvenNumbers(numbers) {
     }
     return sum;
 }
-console.log(sumOfEvenNumbers([1, 2, 3, 4, 5, 6]));
+//console.log(sumOfEvenNumbers([1, 2, 3, 4, 5, 6]));
+//challenge 8: Difference Between Sum of Even and Odd Numbers
+function differenceEvenOdd(array) {
+    var evenArray = array.filter(function (i) { return i % 2 === 0; });
+    var oddArray = array.filter(function (i) { return i % 2 !== 0; });
+    var sumEven = 0;
+    var sumOdd = 0;
+    for (var i = 0; i < evenArray.length; i++) {
+        sumEven += evenArray[i];
+    }
+    for (var i = 0; i < oddArray.length; i++) {
+        sumOdd += oddArray[i];
+    }
+    return sumEven - sumOdd;
+}
+console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6]));
