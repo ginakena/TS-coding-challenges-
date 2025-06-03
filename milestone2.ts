@@ -108,7 +108,7 @@ function differenceEvenOdd(array: number[]): number {
 //console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6])); 
 
 //challenge 9: Count truthly
-function countTruthy(object: Record<string, any>): number {
+function countTruthy(object: { [key: string]: any }): number {
   let count = 0;
   for (let key in object) {
     if (object[key]) {
@@ -117,7 +117,7 @@ function countTruthy(object: Record<string, any>): number {
   }
   return count;
 }
-//console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }));
+console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null })); 
 
 //challenge 10: Average of numbers
 function average(array: number[]): number { 
@@ -198,22 +198,25 @@ function removeDuplicates(array: number[]): number[] {
 
 //chalenge 16: Most frequent value
 function mostFrequent(array: number[] | string[]): number | string {
-  let counts: Record<number | string, number> = {};
+  const counts: { [key: string]: number } = {};
   let maxCount = 0;
   let mostFrequentItem: number | string = array[0];
 
-  for (let item of array) {
-    counts[item] = (counts[item] || 0) + 1;
-    if (counts[item] > maxCount) {
-      maxCount = counts[item];
+  for (const item of array) {
+    const key = item.toString(); 
+    counts[key] = (counts[key] || 0) + 1;
+
+    if (counts[key] > maxCount) {
+      maxCount = counts[key];
       mostFrequentItem = item;
     }
   }
+
   return mostFrequentItem;
 }
-console.log(mostFrequent([1, 2, 3, 2, 4, 1, 2]));  
-console.log(mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]));
 
+// console.log(mostFrequent([1, 2, 3, 2, 4, 1, 2]));  
+// console.log(mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]));
 
 
 

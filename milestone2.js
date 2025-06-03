@@ -98,7 +98,7 @@ function countTruthy(object) {
     }
     return count;
 }
-//console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }));
+console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }));
 //challenge 10: Average of numbers
 function average(array) {
     var sum = 0;
@@ -177,13 +177,14 @@ function mostFrequent(array) {
     var mostFrequentItem = array[0];
     for (var _i = 0, array_2 = array; _i < array_2.length; _i++) {
         var item = array_2[_i];
-        counts[item] = (counts[item] || 0) + 1;
-        if (counts[item] > maxCount) {
-            maxCount = counts[item];
+        var key = item.toString();
+        counts[key] = (counts[key] || 0) + 1;
+        if (counts[key] > maxCount) {
+            maxCount = counts[key];
             mostFrequentItem = item;
         }
     }
     return mostFrequentItem;
 }
-console.log(mostFrequent([1, 2, 3, 2, 4, 1, 2]));
-console.log(mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]));
+// console.log(mostFrequent([1, 2, 3, 2, 4, 1, 2]));  
+// console.log(mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]));
